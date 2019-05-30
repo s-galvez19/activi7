@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add user</title>
+</head>
+<body>
+	<h1>Add user</h1>
+	<p>Add a new user</p>
+
+	<form action="/users/addsubmit" method="post">
+		<input type="input" name="username" required><br>
+		<input type="email" name="email" required><br>
+		<input type="password" name="password" required><br>
+
+		<button type="submit">Submit</button>
+	</form>
+
+	<p><a href="/users">Back</a></p>
+</body>
+</html>

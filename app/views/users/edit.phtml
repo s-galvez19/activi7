@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit user</title>
+</head>
+<body>
+	<h1>Edit user</h1>
+	<p>Edit a user</p>
+
+	<form action="/users/editsubmit" method="post">
+		<input type="hidden" name="id" value="<?= $user->id ?>">
+
+		<input type="input" name="username" value="<?= $user->username ?>" required><br>
+		<input type="email" name="email" value="<?= $user->email ?>" required><br>
+		<input type="password" name="password"><br>
+
+		<button type="submit">Submit</button>
+	</form>
+
+	<p><a href="/users">Back</a></p>
+</body>
+</html>

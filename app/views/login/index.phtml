@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<style type="text/css">
+		body {
+			color: <?= $fcolor ?>;
+			background-color: <?= $bcolor ?>;
+		}
+
+		.error {
+			color: red;
+			background-color: pink;
+			border: 1px solid gray;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Login</h1>
+	<p>Please start your session</p>
+
+	<?php if($hasError) { ?>
+		<p class="error"><b>Error</b> user and pass won't match</p>
+	<?php } ?>
+
+	<form action="/login/submit" method="post">
+		<input type="email" name="username" required><br>
+		<input type="password" name="password" required><br>
+		<button type="submit">Login</button>
+	</form>
+</body>
+</html>
